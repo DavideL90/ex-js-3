@@ -17,14 +17,14 @@ var lengthOfLatAereoporti = Object.keys(listaAeroporti.lat).length;
 var distanza = []; //creo un array per contenere le distanze degli aerei
 
 //adesso creo un ciclo for per calcolare la distanza che ogni aereo ha rispetto ad ogni aeroporto
-for (var i = 0; i < lengthOfLatAereoporti; i++) {
-  for (var x = 0; x < lengthOfLatAereiDescr; x++) {
-    distanza = distance(aereiDescr.lat[x], aereiDescr.long[x], listaAeroporti.lat[i], listaAeroporti.long[i]);
-    if(distanza > (aereiDescr.carbu[x] * aereiDescr.km1kg[x])){
-      alert("L'aereo " + aereiDescr.numAereo[x] + " non arriverà a: " + listaAeroporti.nomeAeroporto[i] + " non ha abbastanza carburante! Morirete tutti!!!");
+for (var i = 0; i < lengthOfLatAereiDescr; i++) {
+  for (var x = 0; x < lengthOfLatAereoporti; x++) {
+    distanza = distance(aereiDescr.lat[i], aereiDescr.long[i], listaAeroporti.lat[x], listaAeroporti.long[x]);
+    if(distanza > (aereiDescr.carbu[i] * aereiDescr.km1kg[i])){
+      alert("L'aereo " + aereiDescr.numAereo[i] + " non arriverà a: " + listaAeroporti.nomeAeroporto[x] + " non ha abbastanza carburante! Morirete tutti!!!");
     }
     else{
-      alert("Il carburante dell'aereo: " + aereiDescr.numAereo[x] + " è più che sufficiente! Dormite tranquilli")
+      alert("Il carburante dell'aereo: " + aereiDescr.numAereo[i] + " è più che sufficiente! Dormite tranquilli")
     }
   }
 }
