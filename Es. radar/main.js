@@ -14,7 +14,7 @@ var listaAeroporti ={
 //Determino la lunghezza degli array contenuti negli oggetti
 var lengthOfLatAereiDescr = Object.keys(aereiDescr.lat).length;
 var lengthOfLatAereoporti = Object.keys(listaAeroporti.lat).length;
-var distanza = []; //creo un array per contenere le distanze degli aerei
+var distanza;
 
 //adesso creo un ciclo for per calcolare la distanza che ogni aereo ha rispetto ad ogni aeroporto
 for (var i = 0; i < lengthOfLatAereiDescr; i++) {
